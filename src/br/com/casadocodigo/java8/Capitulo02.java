@@ -26,9 +26,6 @@ public class Capitulo02 {
             }
         });
 
-        /**
-         * Lambda é uma maneira de mais simples de implementar uma interface que só tem um único método abstrato.
-         */
         usuarios.forEach(usuario -> System.out.println(usuario.getNome()));
         usuarios.forEach(usuario -> usuario.tornaModerador());
 

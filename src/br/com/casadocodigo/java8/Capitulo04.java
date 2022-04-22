@@ -13,19 +13,19 @@ public class Capitulo04 {
         Usuario user3 = new Usuario("Guilherme Silveira", 190);
 
         // lista devolvida é imutável
-//        List<Usuario> usuarios = Arrays.asList(user1, user2, user3);
-//
-//        Consumer<Usuario> mostraMensagem = u -> System.out.println("antes de imprimir os nomes");
-//        Consumer<Usuario> imprimeNome = u -> System.out.println(u.getNome());
-//
-//        usuarios.forEach(mostraMensagem.andThen(imprimeNome));
+        List<Usuario> usuarios1 = Arrays.asList(user1, user2, user3);
 
-//        Predicate<Usuario> predicado = new Predicate<Usuario>() {
-//            @Override
-//            public boolean test(Usuario usuario) {
-//                return usuario.getPontos() > 160;
-//            }
-//        };
+        Consumer<Usuario> mostraMensagem = u -> System.out.println("antes de imprimir os nomes");
+        Consumer<Usuario> imprimeNome = u -> System.out.println(u.getNome());
+
+        usuarios1.forEach(mostraMensagem.andThen(imprimeNome));
+
+        Predicate<Usuario> predicado = new Predicate<Usuario>() {
+            @Override
+            public boolean test(Usuario usuario) {
+                return usuario.getPontos() > 160;
+            }
+        };
 
         List<Usuario> usuarios = new ArrayList<>();
         usuarios.add(user1);

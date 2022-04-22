@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
-public class Capitulo5 {
+public class Capitulo05 {
     public static void main(String[] args) {
         Usuario user1 = new Usuario("Paulo Silveira", 150);
         Usuario user2 = new Usuario("Rodrigo Turini", 120);
@@ -30,8 +30,6 @@ public class Capitulo5 {
 
         palavras.forEach(p -> System.out.println(palavras));
 
-        // Para enxergar melhor o que acontece, podemos quebrar esse código em mais
-        // linhas e variáveis locais
         Function<Usuario, String> extraiNome = u -> u.getNome();
         Comparator<Usuario> comparator = Comparator.comparing(extraiNome);
         usuarios.sort(comparator);
@@ -45,8 +43,6 @@ public class Capitulo5 {
 
         usuarios.sort(comparator1);
 
-        // Para evitar o autoboxing e umboxing desnecessário, há interfaces equivalentes que trabalham
-        // diretamente com long , double e int .
         ToIntFunction<Usuario> extraiPontos1 = u -> u.getPontos();
         Comparator<Usuario> comparator2 = Comparator.comparingInt(extraiPontos1);
 
